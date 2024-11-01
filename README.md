@@ -49,10 +49,6 @@ Trong trò chơi này, bạn sẽ chọn giữa **Đá** ✊, **Giấy** 📝 ho
 
 Nếu bạn có bất kỳ ý tưởng nào để cải thiện trò chơi hoặc có câu hỏi, hãy để lại phản hồi cho chúng tôi!
 
-## Tác Giả
-
-- [Tên của bạn]
-
 ---
 
 Hãy tận hưởng trò chơi "Đá, Giấy, Kéo" và chia sẻ với bạn bè của bạn! 🎮✨
