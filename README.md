@@ -1,54 +1,72 @@
-# Rock, Paper, Scissors 🌟
+# Đá, Giấy, Kéo - Trò Chơi Kinh Điển! ✊✋✌️
 
-Chào mừng đến với trò chơi "Đá, Giấy, Kéo"! 🎉 Đây là một trò chơi cổ điển nhưng không bao giờ lỗi thời, nơi bạn có thể thử thách bản thân và máy tính trong một trận đấu thú vị! 💪🤖
+Chào mừng bạn đến với dự án **Đá, Giấy, Kéo**! Đây là một trò chơi đơn giản nhưng vô cùng thú vị, giúp bạn cải thiện kỹ năng lập trình và hiểu hơn về logic điều kiện trong mã nguồn. Hãy tham gia và xem bạn có thể đánh bại máy tính hay không! 💪
 
-## Mô Tả
+## Mô Tả Dự Án 📝
 
-Trong trò chơi này, bạn sẽ chọn giữa **Đá** ✊, **Giấy** 📝 hoặc **Kéo** ✂️ và xem máy tính sẽ chọn gì. Trò chơi rất đơn giản và vui nhộn, phù hợp với mọi lứa tuổi. Hãy xem ai sẽ là người chiến thắng! 🏆
+Trong trò chơi "Đá, Giấy, Kéo", bạn sẽ chơi đối kháng với máy tính. Bạn sẽ chọn một trong ba lựa chọn: Đá, Giấy hoặc Kéo, và máy tính sẽ đưa ra lựa chọn của riêng mình. Trò chơi sẽ xác định ai là người chiến thắng dựa trên quy tắc đơn giản:
 
-## Tính Năng
+- Đá thắng Kéo ✊ > ✌️
+- Kéo thắng Giấy ✌️ > ✋
+- Giấy thắng Đá ✋ > ✊
 
-- **Lựa chọn đơn giản**: Chọn giữa Đá, Giấy, hoặc Kéo.
-- **Chơi không giới hạn**: Tiếp tục chơi cho đến khi bạn muốn thoát.
-- **Thông báo kết quả**: Nhận thông báo ngay lập tức về kết quả của mỗi trận đấu.
+## Cách Chạy Dự Án 🚀
 
-## Yêu Cầu
+1. **Cài đặt Python**: Đảm bảo bạn đã cài đặt Python trên máy tính của mình. Bạn có thể tải Python tại [python.org](https://www.python.org/downloads/).
 
-- Python 3.x
+2. **Chạy Mã Nguồn**: Sao chép mã nguồn từ và mở tệp Python (.py) trong một trình soạn thảo mã. Sau đó, chạy chương trình:
+   ```bash
+   python RockPaperScissors.py
+   ```
 
-## Hướng Dẫn Cài Đặt
+## Mã Nguồn 📄
 
-1. **Cài đặt Python**:
-   - Đảm bảo bạn đã cài đặt Python 3.x trên máy tính của mình. Bạn có thể tải xuống từ [trang chính thức của Python](https://www.python.org/downloads/).
+Dưới đây là mã nguồn chính của dự án:
 
-2. **Tạo Tệp Mới**:
-   - Mở một trình soạn thảo mã và tạo tệp mới có tên `rock_paper_scissors.py`.
+```python
+import random
 
-3. **Dán Mã**: 
-   - Sao chép mã nguồn từ file này và dán vào tệp `rock_paper_scissors.py`.
+def rock_paper_scissors():
+    choices = ["rock", "paper", "scissors"]
+    print("🎉 Chào mừng đến với trò chơi Đá, Giấy, Kéo! 🎊")
+    
+    while True:
+        user_choice = input("Nhập 'rock' ✊, 'paper' 📝, hoặc 'scissors' ✂️ (hoặc 'quit' để thoát): ").lower()
+        
+        if user_choice == 'quit':
+            print("✌️ Cảm ơn bạn đã chơi! Hẹn gặp lại lần sau! 💖")
+            break
+        
+        if user_choice not in choices:
+            print("🚫 Lựa chọn không hợp lệ! Xin vui lòng thử lại.")
+            continue
+        
+        computer_choice = random.choice(choices)
+        print(f"🤖 Máy tính đã chọn: {computer_choice}")
 
-4. **Chạy Ứng Dụng**:
-   - Mở terminal hoặc command prompt, điều hướng đến thư mục chứa tệp và chạy lệnh:
-     ```bash
-     python rock_paper_scissors.py
-     ```
+        if user_choice == computer_choice:
+            print("🤝 Hòa! Cả hai đều chọn", user_choice)
+        elif (user_choice == "rock" and computer_choice == "scissors") or \
+             (user_choice == "scissors" and computer_choice == "paper") or \
+             (user_choice == "paper" and computer_choice == "rock"):
+            print("🎉 Bạn thắng! Tuyệt vời! 🏆")
+        else:
+            print("😢 Bạn thua! Máy tính thắng.")
 
-## Cách Chơi
+# Chạy trò chơi
+rock_paper_scissors()
+```
 
-- Nhập `rock`, `paper`, hoặc `scissors` để chọn lựa của bạn.
-- Nhập `quit` để thoát khỏi trò chơi.
-- Hãy xem máy tính đã chọn gì và xem ai là người chiến thắng! 🎊
+## Ghi Chú 📌
 
-## Tính Năng Nâng Cao (Có thể thêm sau)
+- **Khám Phá Thêm**: Hãy thử thay đổi các quy tắc hoặc thêm tính năng như chơi nhiều vòng hoặc lưu điểm số!
+- **Chia Sẻ Sáng Tạo**: Nếu bạn tạo ra phiên bản độc đáo của trò chơi, đừng quên chia sẻ với bạn bè và cộng đồng nhé! 🌍
 
-- Ghi nhớ lựa chọn của người chơi.
-- Chế độ đối kháng với người chơi khác.
-- Theo dõi điểm số trong nhiều trận đấu.
+## Liên Hệ 🤝
 
-## Góp Ý
-
-Nếu bạn có bất kỳ ý tưởng nào để cải thiện trò chơi hoặc có câu hỏi, hãy để lại phản hồi cho chúng tôi!
+Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ, hãy liên hệ với chúng tôi qua [Fanpage CodeThinkers](https://www.facebook.com/CodeThinkers).
 
 ---
 
-Hãy tận hưởng trò chơi "Đá, Giấy, Kéo" và chia sẻ với bạn bè của bạn! 🎮✨
+Hãy cùng nhau khám phá và sáng tạo với lập trình nhé! 💖
+```
